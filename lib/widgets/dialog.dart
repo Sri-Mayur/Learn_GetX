@@ -14,6 +14,7 @@ class DialogWidget extends StatelessWidget {
       body: Column(
         children: [
           Card(
+            margin: EdgeInsets.only(top: 20),
             child: ListTile(
                 title: Text("GetX dialog alert!"),
                 subtitle: Text("GetX dialog alert with GetX"),
@@ -28,7 +29,15 @@ class DialogWidget extends StatelessWidget {
                           onPressed: () => Navigator.pop(context),
                           child: Text("NO")),
                     )),
-          )
+          ),
+          SizedBox(
+            height: 40,
+          ),
+          ElevatedButton(
+              onPressed: () {
+                Get.toNamed('/theme');
+              },
+              child: Text("Go to Theme!"))
         ],
       ),
     );

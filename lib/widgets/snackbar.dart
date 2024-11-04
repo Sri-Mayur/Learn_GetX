@@ -12,7 +12,15 @@ class SnackBarWidget extends StatelessWidget {
         backgroundColor: const Color.fromARGB(150, 104, 58, 183),
       ),
       body: Column(
-        children: [],
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: ElevatedButton(
+                onPressed: () => Get.toNamed('/navigator1'),
+                child: Text("Navigator")),
+          )
+        ],
       ),
       floatingActionButton: FloatingActionButton(onPressed: () {
         Get.snackbar("Hello Guys! ", "Welcome back to my Youtube Channel!!",
