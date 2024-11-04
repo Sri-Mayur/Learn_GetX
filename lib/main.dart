@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx/widgets/counter.dart';
 import 'package:getx/widgets/showLang.dart';
 import 'package:getx/widgets/dialog.dart';
 import 'package:getx/widgets/languages.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           brightness: Brightness.dark,
           primaryColor: const Color.fromARGB(255, 68, 36, 122)),
-      home: LanguageWidget(),
+      home: CounterWidget(),
       getPages: [
         GetPage(name: '/dialog', page: () => DialogWidget()),
         GetPage(name: '/theme', page: () => ThemeWidget()),
