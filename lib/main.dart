@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx/widgets/showLang.dart';
 import 'package:getx/widgets/dialog.dart';
+import 'package:getx/widgets/languages.dart';
 import 'package:getx/widgets/mediaQuery.dart';
 import 'package:getx/widgets/navigator1.dart';
 import 'package:getx/widgets/snackbar.dart';
@@ -15,10 +17,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      translations: Languages(),
+      locale: Locale('en', 'US'),
+      fallbackLocale: Locale('en', 'US'),
       theme: ThemeData(
           brightness: Brightness.dark,
           primaryColor: const Color.fromARGB(255, 68, 36, 122)),
-      home: MediaqueryWidget(),
+      home: LanguageWidget(),
       getPages: [
         GetPage(name: '/dialog', page: () => DialogWidget()),
         GetPage(name: '/theme', page: () => ThemeWidget()),
